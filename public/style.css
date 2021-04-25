@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+h1 {
+    color: #440a67;
+}
+
+.login-container {
+    width: 80%;
+    margin: auto;
+}
+
+form {
+    width: 100%;
+    max-width: 800px;
+}
+
+input {
+    padding: 7px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    outline: none;
+    border: 1px solid gray;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    color: #440a67;
+    margin-bottom: 3px;
+    display: inline-block;
+}
+
+button {
+    outline: none;
+    width: 100%;
+}
+
+.btn {
+    background-color: #93329e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover{ 
+    background-color: #440a67;    
+}
+
+.wrap-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.alert {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0px;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: justify;
+}
+
+.alert.alert__danger::before{ 
+    content: "⚠ Error: ";
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.alert__danger {
+    background: red;
+    color: #fff;
+}
+
+.alert.alert__success::before{ 
+    content: "✔ Success: ";
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.alert__success {
+    background: green;
+    color: #fff;
+}
+
+.alert__success {
+    background: green;
+    color: #fff;
+}
+
+table tr:nth-child(1) {
+    background-color: #440a67;
+    color: #fff;
+}
+
+tr,td {
+    border-left: 1px solid #111;
+}
+
+td:last-child {
+    border-right: 1px solid #111;
+}
+
+tr:last-child td {
+    border-bottom: 1px solid #111;
+}
+
+tr td:first-child {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+a {
+    font-weight: bold;
+    margin: 10px 0px 0px 0px !important;
+    display: block;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .wrap-center {
+        padding: 10px;
+        width: 90%;
+    }
+}

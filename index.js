@@ -1,52 +1,98 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
-const url = "https://5d7cca6fcb7ecb0014442082.mockapi.io"
+const port = process.env.PORT || 5000
 const axios = require('axios')
+const url = "http://localhost:5000"
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
+app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
-    try {
-        let result = await axios({
-            method: 'GET',
-            url: url + '/user'
-        }) 
-        res.render('index', {
-            users: result.data
-        })
-    } catch (error) {
-        console.log(error)
-    }
+    console.log('Client connect')
+    res.render('index', {
+        users: []
+    })
 })
 
 app.post('/', async (req,res) => {
     try {
         const { username, password } = req.body
-        console.log(username, password)
+
         let result = await axios({
-            method: 'GET',
-            url: url + '/user'
+            url: `http://localhost:3000/users`,
+            method: "GET",
+            params: {
+                username,
+                password
+            }
         })
-        let index = result.data.findIndex(user => {
-            return user.username === username && user.password === password
-        })
-        if(index === -1) {
-            res.render('index', {success: false, error: "username or password is not correct", users: result.data})
+
+        console.log(result.data)
+
+        if(result && result.data.length != 0) {
+            res.render('login-success', {
+                user: result.data[0]
+            })
         } else {
-            res.render('login-success')
+            res.render('login-fail')
         }
     } catch (error) {
         console.log(error)
     }
-    
 })
+
+// dataSeed()
 
 app.listen(port, () => {
     console.log(`Server open port ${port}`)
 })
+
+async function dataSeed() {
+    let arrayPassword = [
+        "aspirine",
+        "456654",
+        "socrates",
+        "photo",
+        "parola",
+        "nopass",
+        "megan",
+        "lucy",
+        "kenwood",
+        "kenny",
+        "imagine",
+        "forgot",
+        "cynthia",
+        "blondes",
+        "ashton",
+        "aezakmi",
+        "1234567q",
+        "viper1",
+        "terry",
+        "sabine",
+        "redalert",        
+    ]
+    let users = []
+    for(let i = 10 ; i < 20; i++) {
+        users.push(axios({
+            method: "POST",
+            data: {
+                "id": "31174100" + i,
+                "username": "31174100" + i,
+                "password": arrayPassword[i - 10],
+                "email": "31174100" + i + "@sgu.edu",
+                "phone": "090911133xx",
+                "country": "VietNam",
+                "district": "Q6",
+                "City": "HCM"
+            },
+            url: `http://localhost:3000/users`,
+        }))
+    }
+    await Promise.all(users)
+}
+
 
 module.exports = app;

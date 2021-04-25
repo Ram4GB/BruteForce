@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login success</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <p id="login-success">Login success</p>
+    <div class="wrap-center">
+        <h1 style="font-weight: bold;text-align: center;" id="login-success">Login success</h1>
+        <div class="alert alert__success">
+            Congratulations on your successful login to our system. We very much welcome your theology of your learning and hard work.
+        </div>
+        <table cellpadding="10px" style="width: 100%;" cellspacing="0px">
+            <tbody>
+                <tr">
+                    <td style="font-weight: bold; text-align: left; text-transform: uppercase;">Attribute</td>
+                    <td style="font-weight: bold; text-align: left; text-transform: uppercase;">Value</td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>Username</td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td><%= user.id %></td>
+                </tr>
+                <tr>
+                    <td>username</td>
+                    <td><%= user.username %></td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td><%= user.password %></td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td><%= user.email %></td>
+                </tr>
+                <tr>
+                    <td>phone</td>
+                    <td><%= user.phone %></td>
+                </tr>
+                <tr>
+                    <td>country</td>
+                    <td><%= user.country %></td>
+                </tr>
+                <tr>
+                    <td>district</td>
+                    <td><%= user.district %></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><%= user.City %></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/">Logout account</a>
+    </div>
 </body>
 </html>
