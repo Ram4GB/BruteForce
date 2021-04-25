@@ -30,8 +30,6 @@ app.post('/', async (req,res) => {
             }
         })
 
-        console.log(result.data)
-
         if(result && result.data.length != 0) {
             res.render('login-success', {
                 user: result.data[0]
