@@ -19,7 +19,7 @@ app.use(cors());
 async function main(value, socket, io) {
     try {
         const browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
             args: ["--incognito"],
         });
         const page = await browser.newPage();
@@ -59,15 +59,29 @@ async function main(value, socket, io) {
         });
 
         for (let i = 0; i <= arrayPassword.length; i++) {
-            await page.goto(url).catch((e) => e);
-            await page.type(usernameSelector, usernameValue).catch((e) => e);
-            await page.type(passwordSelector, arrayPassword[i]).catch((e) => e);
-            await page.click(buttonValue).catch((e) => e);
-            await page.waitForSelector(waitForSelector).catch((e) => e);
-            let element = await page.$(waitForSelector).catch((e) => e);
+            await page.goto(url).catch((e) => {
+                console.log(e);
+            });
+            await page.type(usernameSelector, usernameValue).catch((e) => {
+                console.log(e);
+            });
+            await page.type(passwordSelector, arrayPassword[i]).catch((e) => {
+                console.log(e);
+            });
+            await page.click(buttonValue).catch((e) => {
+                console.log(e);
+            });
+            await page.waitForSelector(waitForSelector).catch((e) => {
+                console.log(e);
+            });
+            let element = await page.$(waitForSelector).catch((e) => {
+                console.log(e);
+            });
             let value = await page
                 .evaluate((el) => el.textContent, element)
-                .catch((e) => e);
+                .catch((e) => {
+                    console.log(e);
+                });
             if (value === "Login fail") {
                 console.log("[FAIL]", arrayPassword[i]);
                 io.emit("request-to-client-password", {
@@ -117,7 +131,7 @@ function appendString(prefix, number) {
 }
 
 io.on("connection", function (socket) {
-    console.log("a user connected", new Date().toLocaleTimeString(), socket);
+    console.log("a user connected", new Date().toLocaleTimeString());
     io.emit("request-to-client-message", {
         message: "Hi from server.",
     });

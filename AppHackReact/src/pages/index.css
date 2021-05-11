@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.dialog {
+  display: none;
+  background-color: blueviolet;
+  width: 80%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  color: #fff;
+}
+
+.dialog.active {
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 24%;
+  border: 1px solid #111;
+  padding: 10px;
+  margin: 5px;
+}
+
+.modal {
+  background-color: red;
+}
+
+/* index outside */
+
+.modal {
+  background-color: blueviolet;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  color: #fff;
+  display: none;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-header {
+  font-size: 30px;
+  text-align: center;
+}
+
+.modal-description {
+  text-align: justify;
+}
+
+.yellow {
+  background-color: yellow !important;
+}

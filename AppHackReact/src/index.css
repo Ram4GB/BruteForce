@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+
+* {
+  font-family: "JetBrains Mono", monospace;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: rgb(0, 255, 0);
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.input-type {
+  margin-bottom: 20px;
+}
+
+.input-type div {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.input-type label {
+  width: 200px;
+}
+
+.input-type input {
+  padding: 6px 12px;
+  border: 1px solid gray;
+  color: gray;
+  outline: none;
+  width: 500px;
+  background: none;
+}
+
+table,
+tr,
+td {
+  border: 1px solid gray;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+}
+
+td {
+  padding: 10px;
+}
+
+.animation-color {
+  animation: changeColor 0.3s ease;
+  transition: 1s;
+}
+
+.loading-bar {
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  border: 5px solid rgb(0, 255, 0);
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+  margin: 20px 0px;
+}
+
+.loading-percent {
+  background-color: rgb(0, 255, 0);
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: #555;
+    color: #111;
+  }
+  100% {
+    background-color: red;
+    color: #fff;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+}

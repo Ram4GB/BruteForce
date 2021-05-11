@@ -1,20 +1,90 @@
 {
     "users": [
         {
-            "id": "3117410027",
-            "username": "3117410027",
-            "password": "12345678",
-            "email": "3117410027@sgu.edu",
+            "id": "3117410001",
+            "username": "nguducthuan",
+            "password": "nguducthuan",
+            "email": "3117410001@sgu.edu",
             "phone": "090911133xx",
             "country": "VietNam",
             "district": "Q6",
             "City": "HCM"
         },
         {
-            "id": "3117410015",
-            "username": "3117410015",
-            "password": "abcd1234",
-            "email": "3117410015@sgu.edu",
+            "id": "3117410002",
+            "username": "leminhcuong",
+            "password": "29081999",
+            "email": "3117410002@sgu.edu",
+            "phone": "090911133xx",
+            "country": "VietNam",
+            "district": "Q6",
+            "City": "HCM"
+        },
+        {
+            "id": "3117410003",
+            "username": "3117410003",
+            "password": "3117410003",
+            "email": "3117410003@sgu.edu",
+            "phone": "090911133xx",
+            "country": "VietNam",
+            "district": "Q6",
+            "City": "HCM"
+        },
+        {
+            "id": "3117410004",
+            "username": "3117410004",
+            "password": "123456789",
+            "email": "3117410004@sgu.edu",
+            "phone": "090911133xx",
+            "country": "VietNam",
+            "district": "Q6",
+            "City": "HCM"
+        },
+        {
+            "id": "3117410005",
+            "username": "3117410005",
+            "password": "025991636",
+            "email": "3117410005@sgu.edu",
+            "phone": "090911133xx",
+            "country": "VietNam",
+            "district": "Q6",
+            "City": "HCM"
+        },
+        {
+            "id": "3117410006",
+            "username": "3117410006",
+            "password": "123456789",
+            "email": "3117410006@sgu.edu",
+            "phone": "090911133xx",
+            "country": "VietNam",
+            "district": "Q6",
+            "City": "HCM"
+        },
+        {
+            "id": "3117410007",
+            "username": "3117410007",
+            "password": "shadow",
+            "email": "3117410007@sgu.edu",
+            "phone": "090911133xx",
+            "country": "VietNam",
+            "district": "Q6",
+            "City": "HCM"
+        },
+        {
+            "id": "3117410008",
+            "username": "3117410008",
+            "password": "freedom",
+            "email": "3117410008@sgu.edu",
+            "phone": "090911133xx",
+            "country": "VietNam",
+            "district": "Q6",
+            "City": "HCM"
+        },
+        {
+            "id": "3117410009",
+            "username": "3117410009",
+            "password": "slipknot",
+            "email": "3117410009@sgu.edu",
             "phone": "090911133xx",
             "country": "VietNam",
             "district": "Q6",
