@@ -33,7 +33,9 @@ Chạy server `npm run sv`
 
 Đây là server để thực hiện tính toán các request kiểm tra tài khoản bằng việc sử dụng hình thức Dictionary BruteForce.
 
-Server này chỉ giao tiếp với client bằng Socket để thực hiện realtime các số liệu. Client sẽ được up bằng phía sau và được viết bằng React.
+Server này chỉ giao tiếp với client bằng Socket để thực hiện realtime các số liệu.
+
+AppHackReact là App được viết bằng React để thực hiện Hack Website nạn nhân và dùng puppeeter làm server để xử lý
 
 ![alt](./images/5.png)
 
